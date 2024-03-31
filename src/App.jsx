@@ -99,6 +99,7 @@ function App() {
         <div>
           <Line />
         </div>
+        <div className='mobile-heading bg-indigo-700'>By Context  API </div>
         <div className='right-side'>
           <div className="context-box">
             <p>while <mark>useContext() </mark>can help in avoiding prop drilling and centralizing shared state</p>
@@ -134,6 +135,10 @@ function App() {
 
         </div>
       </div>
+
+      <footer>
+        Made with ❤️ by saksham vedi
+      </footer>
 
     </>
   );
