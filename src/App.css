@@ -3,6 +3,16 @@ body {
 
 }
 
+.body-term {
+  position: absolute;
+  bottom: 100px;
+  background-color: rgb(49, 19, 19);
+
+  width: 50%;
+  color: white;
+
+}
+
 .main-text-box {
   display: flex;
   justify-content: center;

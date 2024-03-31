@@ -1,7 +1,36 @@
 import { Chip } from '@mui/material';
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 function Terminal() {
+    const [code, setcode] = useState("");
+    const [todo, settodo] = useState([]);
+    const [error, seterror] = useState("");
+    const coderef = useRef("");
+    function passdata(e) {
+        setcode(e.target.value);
+    }
+    function checkCode() {
+        var getcode = code;
+        coderef.current.value = "",
+            console.log(getcode)
+        if (code.length > 0) {
+            if (code.toLowerCase().includes("tmx create")) {
+                var todos = code.substring(10, code.length);
+                setcode(todos)
+                settodo(() => {
+                    todo.push(todos);
+                })
+                seterror("")
+                console.log(todo);
+            }
+            else {
+                seterror("SYNTAX ERROR  !! Kindly Fix that .......zzzzz")
+            }
+        }
+        else {
+            seterror("SYNTAX ERROR  !! Kindly Fix that .......zzzzz")
+        }
+    }
     return (
         <>
 
@@ -25,10 +54,14 @@ function Terminal() {
             </div>
 
             <div className='terminal'>
-                <div className="body-term"></div>
+                <div className="body-term" >
+                    {error}
+                </div>
                 <div className='terminal-input'>
+
                     <label>P.S. Terminal // </label>
-                    <input type="text" placeholder="Type Command " className='terminal-body' />
+                    <input type="text" placeholder="Type Command " className='terminal-body' onChange={passdata} ref={coderef} />
+                    <button onClick={checkCode}>Enter</button>
                 </div>
             </div>
 
