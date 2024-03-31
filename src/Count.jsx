@@ -8,7 +8,7 @@ function Count() {
 
     return (
         <>
-            <div>Count : {count}
+            <div className='count-box'>Count :<h2 className='text-4xl'>{count}</h2>
             </div>
             <Increase />
         </>

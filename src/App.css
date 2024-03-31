@@ -1,6 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "Nunito", sans-serif;
 
+}
+
+p {
+  color: wheat;
+  font-size: 14px;
+}
+
+.main-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+label {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.appsection {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #49243E;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+.right-side {
+  width: 50%;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.context-box {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #333A73;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+.count-box {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #333A73;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+.countarea {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #240A34;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 9999;
+}
+
+.passingProps .myflow {
+  position: relative;
+  font-size: 34px;
+  z-index: 0;
+  animation: moveDown 2s ease-in-out;
+}
+
+.passingProps .myflow2 {
+  position: relative;
+  font-size: 34px;
+  z-index: 9999999999;
+
+  animation: moveDowns 2s ease-in-out;
+}
+
+
+.passingProps.invisible {
+  display: none;
+  transition: 1s forwards;
+}
+
+@keyframes moveDown {
+  from {
+    top: -50px;
+    /* Starting position */
+  }
+
+  to {
+    top: 80px;
+    /* Ending position */
+  }
+}
+
+@keyframes moveDowns {
+  from {
+    top: -50px;
+    /* Starting position */
+  }
+
+  to {
+    top: 420px;
+    /* Ending position */
+  }
+}
+
+
+
+
+.showarea {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #824D74;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+
+.increase {
+  border: solid 1px white;
+  width: fit-content;
+  margin: 20px;
+  margin-top: 70px;
+  background-color: #481E14;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+h1 {
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: black;
+  z-index: 99999;
+  padding: 10px;
+
+}
+
+.line {
+  height: 100vh;
+  background-color: yellowgreen;
+  width: 2px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .body-term {
@@ -36,7 +205,8 @@ body {
   width: 80%;
   gap: 20px;
   background-color: #35374B;
-  padding: 20px;
+  padding: 10px;
+
 }
 
 
