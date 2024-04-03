@@ -22,7 +22,7 @@ function App() {
     setTimeout(() => {
       setCounts(counts + 1);
     }, 2600)
-    setCounts2(counts2 + 1);
+    setCounts2();
     setVariable("")
     setTimeout(() => {
       setVariable("invisible")
